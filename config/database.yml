@@ -82,7 +82,8 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: total_me_production
-  username: total_me
-  password: <%= ENV["TOTAL_ME_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
+  # <<: *default
+  # database: total_me_production
+  # username: total_me
+  # password: <%= ENV["TOTAL_ME_DATABASE_PASSWORD"] %>
